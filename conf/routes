@@ -1,0 +1,10 @@
+# Define routes for HomeController actions
+
+GET     /                        controllers.HomeController.index
+GET     /users                   controllers.HomeController.users
+GET     /users/:id               controllers.HomeController.user(id: String)
+POST    /users                   controllers.HomeController.add
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
